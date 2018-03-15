@@ -92,9 +92,9 @@ var SMDateTimePickerCtrl = function($scope, $element, $mdUtil, $mdMedia, $docume
     self.calenderPan = angular.element(self.calenderPane);
 
     //check if mode is undefied set to date mode
-    self.mode = angular.isUndefined($scope.mode) ? 'date' : $scope.mode;
+    //self.mode = angular.isUndefined($scope.mode) ? 'date' : $scope.mode;
     // check if Pre defined format is supplied
-    self.format = angular.isUndefined($scope.format) ? 'MM-DD-YYYY' : $scope.format;
+    //self.format = angular.isUndefined($scope.format) ? 'MM-DD-YYYY' : $scope.format;
 
     self.calenderPan.addClass('hide hide-animate');
 

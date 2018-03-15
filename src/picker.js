@@ -299,18 +299,14 @@ if (typeof moment === 'undefined') {
         var keys = [];
         var key;
         for (key in daysByName) {
-            if (daysByName.hasOwnProperty(key)) {
-                keys.push(key);
-            }
+            keys.push(key);
         }
         
         var startIndex = moment().day(self.startDay).day(), count = 0;
         
         for (key in daysByName) {
-            if (daysByName.hasOwnProperty(key)) {
-                self.dateCellHeader.push(daysByName[ keys[ (count + startIndex) % (keys.length)] ]);
-                count++; // Don't forget to increase count.
-            }
+            self.dateCellHeader.push(daysByName[ keys[ (count + startIndex) % (keys.length)] ]);
+            count++; // Don't forget to increase count.
         }
     };
     /*
@@ -1024,9 +1020,9 @@ var SMDateTimePickerCtrl = function($scope, $element, $mdUtil, $mdMedia, $docume
     self.calenderPan = angular.element(self.calenderPane);
 
     //check if mode is undefied set to date mode
-    self.mode = angular.isUndefined($scope.mode) ? 'date' : $scope.mode;
+    //self.mode = angular.isUndefined($scope.mode) ? 'date' : $scope.mode;
     // check if Pre defined format is supplied
-    self.format = angular.isUndefined($scope.format) ? 'MM-DD-YYYY' : $scope.format;
+    //self.format = angular.isUndefined($scope.format) ? 'MM-DD-YYYY' : $scope.format;
 
     self.calenderPan.addClass('hide hide-animate');
 
